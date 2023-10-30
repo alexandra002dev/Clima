@@ -3,6 +3,7 @@ const button = document.querySelector(".material-symbols-outlined");
 let horaTex = document.querySelector("#hora"); 
 let minutoTex = document.querySelector("#minuto");
 let segundoTex = document.querySelector("#segundo");
+let diaDaSemana = document.querySelector(".dia");
 const key = "b74023e8fa691037aaa1c471c00e4782";
 
 function relogio(){
@@ -13,28 +14,14 @@ let segundos = data.getSeconds();
  horaTex.innerHTML = fixZero(hora);
  minutoTex.innerHTML = fixZero(minuto);
  segundoTex.innerHTML = fixZero(segundos);
+ let semana = data.getDay();
+ dayName = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
+ document.querySelector(".dia").innerHTML = dayName[semana];
 };
 
 function uploadTela(dados){
     let data = new Date();
-    let semana = data.getDay();
-    switch(semana){
-        case 0: "Domingo";
-        break;
-        case 1: "Segunda";
-        case 2: "Terça";
-        break;
-        case 3: "Quarta";
-        break;
-        case 4: "Quinta";
-        break;
-        case 5: "Sexta";
-        break;
-        case 6: "Sábado";
-        break;
-        
-    }
-    document.querySelector(".dia").innerHTML = semana;
+ 
     document.querySelector(".cidade").innerHTML = `${dados.name}, ${dados.sys.country}`;
     document.querySelector(".temperaturaAtual p").innerHTML = `${Math.floor(dados.main.temp)} ºC`;
     document.querySelector(".humidadePorc").innerHTML = `${Math.floor(dados.main.humidity)} %`;
