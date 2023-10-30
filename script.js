@@ -3,7 +3,6 @@ const button = document.querySelector(".material-symbols-outlined");
 let horaTex = document.querySelector("#hora"); 
 let minutoTex = document.querySelector("#minuto");
 let segundoTex = document.querySelector("#segundo");
-let diaDaSemana = document.querySelector(".dia");
 const key = "b74023e8fa691037aaa1c471c00e4782";
 
 function relogio(){
@@ -16,7 +15,9 @@ let segundos = data.getSeconds();
  segundoTex.innerHTML = fixZero(segundos);
  let semana = data.getDay();
  dayName = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
+ monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
  document.querySelector(".dia").innerHTML = dayName[semana];
+ document.querySelector(".data").innerHTML = `${data.getDate()} de ${monName[data.getMonth()]} ${data.getFullYear()}`;
 };
 
 function uploadTela(dados){
@@ -48,4 +49,5 @@ setInterval(relogio,1000);
 
 function fixZero(time) {
     return time <10? "0"+ time : time;
-};
+}
+relogio();
