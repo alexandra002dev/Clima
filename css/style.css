@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e2e2e2;
+}
+.container{
+    height: 400px;
+    width: 650px;
+    background-color:#232931;
+    border-radius: 25px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex;
+    padding-right: 15px;
+}
+.left{
+    background: url("../css/imagem/mountain-landscape-2031539_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 260px;
+    height: 100%;
+    float: left;
+    display: flex;
+    transform: scale(1.03) perspective(200px);
+    cursor: pointer;
+    box-shadow: 0 0 20px -10px rrgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    flex: 1;
+    padding-top:30px ;
+    flex-direction: column;
+}
+.left .atual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.left .local{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.left .cidade{
+    margin-left: 10px;
+}
+.left:hover{
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+}
+.left .temperaturaAtual{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.temperaturaAtual i{
+    font-size: 90px;
+}
+.left p{
+    font-weight: 600;
+    font-size: 50px;
+    pointer-events: none;
+}
+.left span{
+    font-size: 20px;
+}
+.right{
+   margin-left: 20px;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+}
+.area_chuvaPc{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    pointer-events: none;
+}
+.area_humidade{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+.area_carts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    background-color:#232931;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    margin-left: 50px;
+}
+.relogioText{
+    font-size: 30px;
+}
+.relogio{
+    font-size: 10px;
+}
+.cart{
+    background-color:#232931;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+   
+}
+.cart:hover{
+    transform: scale(1.1);
+    background: #fff;
+    color: #222831;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+.semana{
+    margin-bottom: 10px;
+}
+.search_area{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.search_area input{
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    padding: 5px 5px;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    display: inline-block;
+    border:0;
+    border-bottom: 2px solid #161212;
+    color: #fff;
+}
+.search_area input:focus{
+    border-bottom: 2px solid #fff;
+}
+.search_area label{
+    color: #fff;
+    position: absolute;
+    pointer-events: none;
+    top:0;
+    left: 0;
+    transition: all .3s ease-out;
+    margin-top: 13px;
+}
+
+.search_area input:focus + label,
+.search_area input:valid + label{
+    font-size: 13px;
+    margin-top: 0px;
+    color:#fff;
+}
+.material-symbols-outlined{
+    position: absolute;
+    left:270px;
+    bottom: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all .3s ease-out;
+}
+.material-symbols-outlined:hover{
+  background-color: #ffffffbf;
+  color: #161212;
+}
+
