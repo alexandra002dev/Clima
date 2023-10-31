@@ -63,9 +63,7 @@ body{
     margin-top: 50px;
     margin-left: 40px;
 }
-.temperaturaAtual i{
-    font-size: 90px;
-}
+
 .left p{
     font-weight: 600;
     font-size: 50px;
@@ -80,7 +78,10 @@ body{
    flex-direction: column;
    flex: 1;
 }
-.area_chuvaPc{
+.right p {
+    color: rgb(243, 49, 49);
+}
+.area_vento{
     display: flex;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -137,6 +138,8 @@ body{
 .search_area input{
     background-color: transparent;
     outline: none;
+    text-decoration: none;
+    background-color: transparent;
     width: 100%;
     padding: 5px 5px;
     min-width: 180px;
@@ -178,5 +181,141 @@ body{
 .material-symbols-outlined:hover{
   background-color: #ffffffbf;
   color: #161212;
+}
+
+@media (min-width:390px) and (max-width:650px) {
+    .container{
+        height: 300px;
+        width: 390px;
+    }
+    .left .atual{
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px;
+    }
+    .left{
+        padding: 5px;
+    }
+    .left .data{
+        font-size: 15px;
+        text-align: center;
+    }
+    .left .cidade{
+        font-size: 15px;
+        text-align: center;
+    }
+    .left .temperaturaAtual{
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    .left p{
+        font-weight: 600;
+        font-size: 30px;
+        pointer-events: none;
+        margin-top: 0;
+    }
+    .left span{
+        font-size: 15px;
+    }
+    .left .temperaturaAtual img{
+        width: 50%;
+
+    }
+    .right{
+        margin-left: 9px;
+    }
+    .right .area_carts{
+        margin-left: 10px;
+    }
+    .relogioText{
+        font-size: 20px;
+    }
+    .relogio{
+        font-size: 10px;
+    }
+    .cart{
+        padding: 10px; 
+    }
+    .material-symbols-outlined{
+        left:150px;
+    }
+    .right p {
+        font-size: 10px;
+    }
+}
+@media (min-width:320px) and (max-width:389px) {
+    .container{
+        height: 450px;
+        width: 300px;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .left{
+        padding: 5px;
+        width: 290px;
+        margin-left: 5px;
+        height: 200px;
+    }
+    .left .atual{
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px;
+    }
+    .left .data{
+        font-size: 15px;
+        text-align: center;
+    }
+    .left .cidade{
+        font-size: 15px;
+        text-align: center;
+    }
+    .left .temperaturaAtual{
+        margin-top: 0px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .left p{
+        font-weight: 600;
+        font-size: 30px;
+        pointer-events: none;
+        margin-top: 0;
+    }
+    .left span{
+        font-size: 15px;
+        margin-top: 75px;
+   
+    }
+    .left .temperaturaAtual img{
+        width: 100%;
+
+    }
+    .right .area_vento{
+        margin-top: 5px;
+    }
+    .right{
+        align-items: center;
+    }
+    .right .area_carts{
+        margin-left: 10px;
+        margin-top: 5px;
+        align-items: center;
+    }
+    .relogioText{
+        font-size: 20px;
+    }
+    .relogio{
+        font-size: 10px;
+    }
+    .cart{
+        padding: 10px; 
+    }
+    .material-symbols-outlined{
+        left:150px;
+    }
+    .right p {
+        font-size: 10px;
+    }
 }
 
